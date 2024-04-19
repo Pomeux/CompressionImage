@@ -113,6 +113,9 @@ public class Main {
 		Quadtree.ArbreToImage(A,tree,nom+"Lambda");
 		System.out.println("Fichier dans résultats "+nom+"Lambda");
 	}
+	/*Fonction qui réalise la compression Rho
+ 	Prend en argument un quadtree et un stri
+ 	*/
 	private static void compressionRho(Quadtree A,String nom) throws IOException {
 		System.out.println("Nombre entre 0 et 100");
 		int p=recupererNumero(101,-1);
@@ -127,6 +130,10 @@ public class Main {
 		Quadtree.ArbreToImage(A,tree,nom+"Rho"+p);
 		System.out.println("Fichier dans résultats "+nom+"Rho"+p);
 	}
+	/*
+ 	Fonction qui permet de récuperer fichiers .pgm présent dans le dossier images
+ 	*/
+	// on récupere tous les fichiers .pgm présents dans le fichiers images
 	private static File[] chargerFichier() {
 
 		String chemin=new File("").getAbsolutePath()+"/src/images/";
@@ -147,7 +154,9 @@ public class Main {
 		
 		return f;
 	}
-	
+	/*
+ 	Fonction générique qui permet de de récuperer entré utilisateur,  un int compris entre inf et a 
+ 	*/
 	private static int recupererNumero(int a,int inf) {
 		int s=pasString();
 		
@@ -162,7 +171,9 @@ public class Main {
 		return s;
 	}
 	
-	@SuppressWarnings({ "resource", "unused" })
+	/*
+ 	Fonction qui permet de récuperer un int en entré utilisateur
+ 	*/
 	private static int pasString() {
 		Scanner sc=new Scanner(System.in);
 		
