@@ -55,9 +55,11 @@ public class Main {
 		else {
 			//cas si le nombre d'argument n'est pas égale à 2, menu 
 			boolean enMarche=true;
+			//on récpère tous les fichiers qui se finit par .pgm dans le dossier image
 			File[] f=chargerFichier();
 			
 			while(enMarche) {
+				//on affiche tous les fichiers .pgm présent
 				for(int i=0;i<f.length;i++) {
 					System.out.println(f[i].getName()+ ":" + (i+1));
 				}
